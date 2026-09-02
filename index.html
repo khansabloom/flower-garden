@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffd9e8">
+  <title>Flower Garden</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-flower">✿</span><div><strong>Flower Garden</strong><small>Grow • Collect • Relax</small></div></div>
+      <div class="stats">
+        <span>🌸 <b id="flowerCount">0</b></span>
+        <span>🪙 <b id="coinCount">0</b></span>
+        <span>⭐ <b id="levelText">Lv. 1</b></span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero glass">
+        <div>
+          <p class="eyebrow">YOUR LITTLE DIGITAL GARDEN</p>
+          <h1>Plant a little joy.<br><span>Watch it bloom.</span></h1>
+          <p class="hero-copy">Klik tanah untuk menanam, rawat bunga, dan bangun taman kecilmu sendiri.</p>
+          <div class="hero-actions">
+            <button class="primary" id="plantRandom">🌱 Tanam bunga</button>
+            <button class="secondary" id="waterAll">💧 Siram semua</button>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="hill"></div><div class="mini-flower f1">🌷</div><div class="mini-flower f2">🌼</div><div class="mini-flower f3">🌸</div></div>
+      </section>
+
+      <section class="toolbar">
+        <div><h2>My Garden</h2><p id="gardenHint">Tanam bunga pertama kamu ✨</p></div>
+        <div class="tools">
+          <button class="icon-btn" id="soundToggle" title="Toggle sound">🔊</button>
+          <button class="icon-btn" id="clearGarden" title="Reset garden">↻</button>
+        </div>
+      </section>
+
+      <section class="garden glass" id="garden">
+        <div class="empty-state" id="emptyState"><div class="empty-icon">🌱</div><h3>Tamanmu masih kosong</h3><p>Klik petak mana saja untuk mulai menanam.</p></div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="panel glass">
+          <div class="panel-title"><h2>🌼 Flower Shop</h2><span id="shopMessage">Pilih benih</span></div>
+          <div id="seedList" class="seed-list"></div>
+        </div>
+        <div class="panel glass">
+          <div class="panel-title"><h2>🏆 Progress</h2><span id="xpText">0 / 100 XP</span></div>
+          <div class="progress"><span id="xpBar"></span></div>
+          <div class="quests">
+            <div><span>🌱 Tanam 3 bunga</span><b id="questPlant">0/3</b></div>
+            <div><span>💧 Siram 5 kali</span><b id="questWater">0/5</b></div>
+            <div><span>🌸 Koleksi 5 jenis</span><b id="questTypes">0/5</b></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>Made with 🌷 for a tiny happy garden</footer>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
